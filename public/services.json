@@ -1,0 +1,24 @@
+[
+    { 
+        "id": 1, 
+        "name": "Hot Oil Massage", 
+        "price": 500, 
+        "description": "Increase hair strength and reduce dryness of scalp with the best oil treatment in town.",
+        "img": "https://i.ibb.co/5vFcwzL/1.jpg"
+    },
+
+    { 
+        "id": 2, 
+        "name": "Fruit Facial", 
+        "price": 750, 
+        "description": "Nourish your soul and freshen up your mind with right facial for your skin.",
+        "img": "https://i.ibb.co/s9VGY8v/2.jpg"
+    },
+    { 
+        "id": 3, 
+        "name": "Manicure & Padicure", 
+        "price": 400, 
+        "description": "Polish your nails to look your best version",
+        "img": "https://i.ibb.co/nn2sR0s/Manicure-pedicure.jpg"
+    }
+]
