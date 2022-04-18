@@ -2,22 +2,22 @@
     { 
         "id": 1, 
         "name": "HOT OIL MASSAGE", 
-        "price": 500, 
-        "description": "Increase hair strength and reduce dryness of scalp with the best oil treatment in town.",
+        "price": "500 TAKA", 
+        "description": "Increase hair strength and reduce dryness of scalp with massage",
         "img": "https://i.ibb.co/5vFcwzL/1.jpg"
     },
 
     { 
         "id": 2, 
         "name": "FRUIT FACIAL", 
-        "price": 750, 
-        "description": "Nourish your soul and freshen up your mind with right facial for your skin.",
+        "price": "750 TAKA",
+        "description": "Nourish your soul and freshen up your mind with fruit facial",
         "img": "https://i.ibb.co/s9VGY8v/2.jpg"
     },
     { 
         "id": 3, 
         "name": "MANICURE & PADICURE", 
-        "price": 400, 
+        "price": "400 TAKA", 
         "description": "Polish your nails to look your best version",
         "img": "https://i.ibb.co/nn2sR0s/Manicure-pedicure.jpg"
     }
