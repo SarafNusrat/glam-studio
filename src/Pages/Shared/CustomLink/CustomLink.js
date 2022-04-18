@@ -12,7 +12,7 @@ function CustomLink({ children, to, ...props }) {
     return (
       <div className='flex flex-row items-center justify-between mx-auto px-16 h-70'>
         <Link
-          style={{color: match ? 'darkOrange' : "black", fontWeight: match ? 'semiBold' : "normal"}}
+          style={{color: match ? 'darkOrange' : "black", fontWeight: match ? 'Bold' : "normal"}}
           to={to}
           {...props}
         >

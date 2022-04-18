@@ -7,7 +7,7 @@ const Home = () => {
         <div>
             <div className="rounded overflow-hidden">
                <div className="content-center px-5">
-                  <p className="font-bold text-center text-2xl pt-2 text-blue-200"><small>Feel Beautiful with</small></p>
+                  <p className="font-bold text-center text-2xl pt-4 overline text-blue-200"><small>Feel Beautiful with</small></p>
                   <h1 className="font-bold text-5xl text-center mb-4 text-orange-600">GLAM STUDIO</h1>
                 </div>
                 <div>
