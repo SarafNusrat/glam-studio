@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import SocialLogin from './SocialLogin/SocialLogin';
+import { sendPasswordResetEmail } from 'firebase/auth';
 
 const Login = () => {
     const [
@@ -16,6 +17,12 @@ const Login = () => {
     const passwordRef = useRef('');
     const navigate = useNavigate();
     const location = useLocation();
+    let errorElement;
+
+    if (error) {
+        errorElement = 
+                <p className='text-red-600'>Error: {error.message}</p>
+    }
 
     let from = location.state?.from?.pathname || "/checkout";
 
@@ -33,6 +40,14 @@ const Login = () => {
 
     const navigateRegister = event => {
         navigate('/register');
+    }
+
+    const handlePasswordReset = () => {
+        const email = emailRef.current.value;
+        sendPasswordResetEmail(auth, email)
+        .then(() => {
+            console.log("email sent");
+        })
     }
    
     return (
@@ -59,10 +74,17 @@ const Login = () => {
                     </div>
                 </div>
 
-                <button className='bg-blue-300 mt-2 mb-4 hover:bg-orange-400 text-small text-white px-3 py-2 font-bold rounded'>Submit</button>
+                <button className='bg-blue-300 mt-2 mb-4 hover:bg-orange-400 text-small text-white px-3 py-2 font-bold rounded'>Login</button>
             </form>
         </div>
-        <p className='text-center'>New to Glam Studio? Register <Link to ="/register" className='text-red-500 pe-auto' onClick={navigateRegister}>NOW!</Link></p>
+        <div className='text-center'>
+        {errorElement}
+        </div>
+      
+        <p className='text-center'>New to Glam Studio? Register <Link to ="/register" className='text-orange-600 font-bold pe-auto' onClick={navigateRegister}>NOW!</Link></p>
+        <button className='text-red-500 font-bold ml-60 pl-80
+     flex justify-center' onClick={handlePasswordReset} variant="link">Forget Password?</button>
+        <br></br>
         <SocialLogin></SocialLogin>
         </div>
     );

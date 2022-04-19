@@ -7,13 +7,11 @@ import img1 from '../../../images/download.png';
 const SocialLogin = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
     const navigate = useNavigate();
+    let errorElement;
 
     if (error) {
-        return (
-            <div>
+        errorElement = 
                 <p className='text-red-600'>Error: {error.message}</p>
-            </div>
-        );
     }
 
     if(user) {
@@ -24,6 +22,7 @@ const SocialLogin = () => {
         <div className='flex justify-center'>
             <div className='flex flex-col w-50'>
                 <p className='mt-2 text-center pb-3'>or</p>
+                {errorElement}
                 <button onClick={() => {
                     signInWithGoogle()} }
                     className='flex border-2 p-2'>
