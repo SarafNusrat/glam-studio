@@ -24,6 +24,10 @@ const Registration = () => {
         createUserWithEmailAndPassword(email, password);
     }
 
+    if(user) {
+        navigate('/');
+    }
+
     const navigateLogin  = event => {
         navigate('/login');
     }
