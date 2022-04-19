@@ -1,7 +1,8 @@
 import React, { useRef } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import SocialLogin from './SocialLogin/SocialLogin';
 
 const Login = () => {
     const [
@@ -13,8 +14,10 @@ const Login = () => {
 
     const emailRef = useRef('');
     const passwordRef = useRef('');
-
     const navigate = useNavigate();
+    const location = useLocation();
+
+    let from = location.state?.from?.pathname || "/checkout";
 
     const handleSubmit = event => {
         event.preventDefault();
@@ -25,7 +28,7 @@ const Login = () => {
     }
 
     if (user) {
-        navigate('/');
+        navigate(from, { replace: true });
     }
 
     const navigateRegister = event => {
@@ -60,6 +63,7 @@ const Login = () => {
             </form>
         </div>
         <p className='text-center'>New to Glam Studio? Register <Link to ="/register" className='text-red-500 pe-auto' onClick={navigateRegister}>NOW!</Link></p>
+        <SocialLogin></SocialLogin>
         </div>
     );
 };
