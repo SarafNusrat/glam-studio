@@ -4,9 +4,11 @@ const Footer = () => {
     const today = new Date();
     const year = today.getFullYear();
     return (
-        <footer className='text-center mt-5 bg-black text-white flex-grow'>
+        <footer className='text-center mt-5 pt-2 pb-2 bg-black text-white flex-grow'>
             <p><small>copyright © {year}</small></p>
         </footer>
+
+        
     );
 };
 
