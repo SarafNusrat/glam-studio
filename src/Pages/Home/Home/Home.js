@@ -21,7 +21,7 @@ const Home = () => {
               <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 ml-36 gap-10 mb-10 w-3/4'>
                   <div className="border-2 bg-orange-100 text-center pb-3">
                     <h2 className='text-4xl font-bold text-blue-400'>220</h2>
-                    <p className='text-2xl font-bold text-orange-500'>Happy two Customers</p>
+                    <p className='text-2xl font-bold text-orange-500'>Happy Customers</p>
                   </div>
                   <div className="border-2 bg-gray-100 text-center pb-3">
                     <h2 className='text-4xl font-bold text-blue-400'>310</h2>
